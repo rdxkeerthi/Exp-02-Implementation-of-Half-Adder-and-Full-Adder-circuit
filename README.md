@@ -26,7 +26,25 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 
 
 ![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
+### Program:
+```
+module Halfadder (a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor (sum,a,b);
+and (carry,a,b);
+endmodule
+```
+### TRUTH TABLE 
+![de3 3](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/592828a7-91a6-468e-ba74-ef021e0d6fdc)
 
+
+### RTL
+![de3 1](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/d0273f8e-4371-4fc3-b176-fc124631f6b0)
+
+
+### TIMING DIAGRAM
+![de3 2](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/21bb948f-917c-41c3-b7df-e1792d890f1b)
 #### Figure -02 FULL ADDER 
 
 ### Procedure
@@ -34,21 +52,28 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
-
-### Output:
-### RTL
-### TIMING DIAGRAM
-
-
+### Program:
+```
+module Fulladder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+xor(sum,a,b,c);
+assign carry=a&b|c& a^ c&b ;
+endmodule
+```
 ### TRUTH TABLE 
+![de3 6](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/2d1c6f5b-daa7-4191-b705-7d67c7e6deaf)
+
+
+
+### RTL
+
+![de3 4](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/7e53b2a9-5eef-4396-95e2-87850160779e)
+
+
+### TIMING DIAGRAM
+![de3 5](https://github.com/rdxkeerthi/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473120/eb718119-b75c-4ea5-9134-3826ddcb39ad)
+
 
 ### Result:
+Thus,half adder and full adder are studied and the truth table for different logic gates are verified.
